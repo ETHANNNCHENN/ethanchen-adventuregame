@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', 'Ubuntu Mono', 'Fira Mono';
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b5e3f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0b7a9c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #006888;
+}
+
+/* Responsive Screen */
+@media only screen and (max-width: 800px) {
+
+    .title {
+        font-size: 2em;
+    
+    }
+
+    .test-area {
+        width: 80vw;
+    }
+}
+
+/* BACKGROUND*/
+
+.container {
+    height: 100vh;
+    background-image: url('images/mountsea.jpg');
+    background-size: cover;
+    /* background-position-y: 70%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    z-index: -1;
+}
+
+.title {
+    margin-top: 12vh;
+    font-size: 3em;
+    color: black;
+}
+.title-white {
+    color: white;
+}
+
+.title-none {
+    display: none;
+}
+.smallwords {
+    color: white;
+}
+
+.smallwords-black {
+    color: black;
+}
+
+.smallwords-none {
+    display: none;
+}
+
+    
+/* JAVASCRIPT TEST AREA */
+
+.test-area {
+    width: 70vw;
+    height: 70vh;
+    box-sizing: border-box;
+    padding: 2em;
+    background-color: rgb(255, 255, 255, 0.8);
+    margin: auto;
+    text-align: left;
+    color: rgb(2, 40, 90);
+    overflow: auto;
+}
+
+/* CALCULATORS */
+
+.calculator-container {
+    background-color: rgb(255, 255, 255, 0.8);
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.screen {
+    background-color: rgb(123, 178, 204);
+    padding: 16px;
+    font-size: 2em;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.calculatorButton {
+    margin-top: 16px;
+    background-color: rgb(37, 117, 155);
+    padding: 16px 0;
+    width: 110px;
+    text-align: center;
+}
+
+.numDisplay {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 0;
+    color: rgb(123, 178, 204);
+    font-size: 1.5em;
+}
+
+.invisible {
+    display: none;
+}
+
+/*Buttons*/
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.btn {
+    background-color: #006888;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px 60px;
+    margin: 40px 50px;
+    justify-content: center;
+}
+
+.btn:hover {
+    background-color: #39ff14;
+    color: black;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Backgrounds */
+.jungle-bg {
+    background-image: url('images/jungle.jpg');
+}
+
+.tiger-bg {
+    background-image: url('images/tiger3.jpg');
+}
+
+.end-bg {
+    background-image: url("images/end.jpg");
+}
+
+.savanna-bg {
+    background-image: url("images/savanna.jpg");
+}
+
+.savanna-animal-bg {
+    background-image: url("images/savanna-animal.jpg");
+}
+
+.lioncub-bg {
+    background-image: url("images/lioncub.jpg");
+}
+
+.lionpride-bg {
+    background-image: url("images/lionpride.jpg");
+}
+
+.hyena-bg {
+    background-image: url("images/hyena.jpg");
+}
+
+.savanna-safe-bg {
+    background-image: url("images/savannasafe.jpg");
+}
+
+.mount-bg {
+    background-image: url("images/mount.jpg");
+}
+
+.ocean-bg {
+    background-image: url("images/ocean.jpg");
+}
+
+.sealion-bg {
+    background-image: url("images/sealion.jpg");
+}
+
+.greatwhite-bg {
+    background-image: url("images/shark.jpg");
+}
+
+.killerwhale-bg {
+    background-image: url("images/killerwhale.jpg");
+}
+
+.sea-bg {
+    background-image: url("images/sea.jpg");
+}
+
+
+/* Story */
+.story {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/*images*/
+.monster {
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.elf img {
+    width: 120px;
+    margin-left: 40%;
+}
+
+
+/* Words */
+
+.doordie {
+    font-size: 2.5em;
+    text-align: center;
+}
+.lose {
+    font-size: 3em;
+    text-align: center;
+}
+
+.school {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.warning {
+    color: #CC0000;
+}
+
