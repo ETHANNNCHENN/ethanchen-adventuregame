@@ -331,9 +331,12 @@ document.querySelector(".fin1-btn").addEventListener("click", function() {
     document.querySelector(".fin3-btn").classList.add("invisible");
     document.querySelector(".fin4-btn").classList.add("invisible");
     // Story 
-    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Congratulations</h3><br><p>With the witness of God's messenger Andean condor, you officially complete the adventure. Have a nice day!</p><<img class='monster' src='images/condor.jpg'>"
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Congratulations</h3><br><p>With the witness of God's messenger Andean condor, you officially complete the adventure. Have a nice day!</p><br><img class='monster' src='images/condor.jpg'>"
     // Oh Yeah
     yeahSound.play();
+    // Buttons
+    document.querySelector(".thank-btn").classList.remove("invisible");
+    document.querySelector(".gosea-btn").classList.remove("invisible");
 })
 
 //Click fin2
@@ -344,7 +347,7 @@ document.querySelector(".fin2-btn").addEventListener("click", function() {
     document.querySelector(".fin3-btn").classList.add("invisible");
     document.querySelector(".fin4-btn").classList.add("invisible");
     // Story 
-    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Spit!</h3><br><p>Adios.</p><<img class='monster' src='images/spit.jpg'>"
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Spit!</h3><br><p>Adios.</p><img class='monster' src='images/spit.jpg'>"
     // Oh Yeah
     loseSound.play();
 })
@@ -357,7 +360,7 @@ document.querySelector(".fin3-btn").addEventListener("click", function() {
     document.querySelector(".fin3-btn").classList.add("invisible");
     document.querySelector(".fin4-btn").classList.add("invisible");
     // Story 
-    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Spit!</h3><br><p>Adios.</p><<img class='monster' src='images/spit.jpg'>"
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Spit!</h3><br><p>Adios.</p><img class='monster' src='images/spit.jpg'>"
     // Oh Yeah
     loseSound.play();
 })
@@ -489,6 +492,282 @@ document.querySelector(".continue-sea-btn").addEventListener("click", function (
     waveSound.play();
 })
 
+// You click "go up"
+document.querySelector(".up-btn").addEventListener("click", function () {
+    // Background Change
+    document.querySelector(".container").classList.add("sardine-bg");
+    // Story 
+    document.querySelector(".story").innerHTML = "<p class='school'>How lively the ocean is! Look at the whole school of sardines. Choose a predator of sardines to take your knowledge challenge.</p>"
+    // Buttons
+    document.querySelector(".up-btn").classList.add("invisible");
+    document.querySelector(".down-btn").classList.add("invisible");
+    document.querySelector(".fish-btn").classList.remove("invisible");
+    document.querySelector(".seabird-btn").classList.remove("invisible");
+    document.querySelector(".cetacean-btn").classList.remove("invisible");
+
+})
+
+// You click "sport fish"
+document.querySelector(".fish-btn").addEventListener("click", function () {
+    // Background Change
+    document.querySelector(".container").classList.add("sailfish-bg");
+    document.querySelector(".title").classList.remove("title-white");
+    document.querySelector(".smallwords").classList.add("smallwords-black");
+    // Story 
+    document.querySelector(".story").innerHTML = "<p class='school'>Which Is Faster?</p>"
+    // Buttons
+    document.querySelector(".sailfish-btn").classList.remove("invisible");
+    document.querySelector(".tuna-btn").classList.remove("invisible");
+    document.querySelector(".fish-btn").classList.add("invisible");
+    document.querySelector(".seabird-btn").classList.add("invisible");
+    document.querySelector(".cetacean-btn").classList.add("invisible");
+})
+
+// You click "sailfish"
+document.querySelector(".sailfish-btn").addEventListener("click", function() {
+    // Story
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Correct!</h3><br><p class='school'>Sailfish has the speed up to 110 KPH (70 MPH)</p>"
+    // Sound
+    winSound.play();
+    // Buttons
+    document.querySelector(".sailfish-btn").classList.add("invisible");
+    document.querySelector(".tuna-btn").classList.add("invisible");
+    document.querySelector(".continue-fish").classList.remove("invisible");
+})
+
+// You click "tuna"
+document.querySelector(".tuna-btn").addEventListener("click", function() {
+    // Story
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Fast, but not that fast.</h3><br><img class='monster' src='images/tuna.jpg'>"
+    // Buttons
+    document.querySelector(".sailfish-btn").classList.add("invisible");
+    document.querySelector(".tuna-btn").classList.add("invisible");
+    // Sound
+    loseSound.play();
+})
+
+// You click "seabird"
+document.querySelector(".seabird-btn").addEventListener("click", function () {
+    // Background Change
+    document.querySelector(".container").classList.add("seabird-bg");
+    document.querySelector(".title").classList.remove("title-white");
+    document.querySelector(".smallwords").classList.add("smallwords-black");
+    // Story 
+    document.querySelector(".story").innerHTML = "<p class='school'>Which flying bird has the largest wingspan?</p>"
+    // Buttons
+    document.querySelector(".frigate-btn").classList.remove("invisible");
+    document.querySelector(".albatross-btn").classList.remove("invisible");
+    document.querySelector(".penguin-btn").classList.remove("invisible");
+    document.querySelector(".fish-btn").classList.add("invisible");
+    document.querySelector(".seabird-btn").classList.add("invisible");
+    document.querySelector(".cetacean-btn").classList.add("invisible");
+})
+
+// Frigate
+document.querySelector(".frigate-btn").addEventListener("click", function() {
+    // Story
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Nope</h3><br><p class='school'>It goes to sleep while aloft, but its wingspan is not the largest.</p><br><img class='monster' src='images/frigate.jpg'>"
+    // Buttons
+    document.querySelector(".frigate-btn").classList.add("invisible");
+    document.querySelector(".albatross-btn").classList.add("invisible");
+    document.querySelector(".penguin-btn").classList.add("invisible");
+    // Sound
+    loseSound.play();
+})
+
+// You click "albatross"
+document.querySelector(".albatross-btn").addEventListener("click", function() {
+    // Story
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Bingo!</h3><br><p class='school'>It has the largest wingspread, up to 11 ft 6 in (3.5 m)</p><br><img class='monster' src='images/albatross.jpg'>"
+    // Sound
+    winSound.play();
+    // Buttons
+    document.querySelector(".frigate-btn").classList.add("invisible");
+    document.querySelector(".albatross-btn").classList.add("invisible");
+    document.querySelector(".penguin-btn").classList.add("invisible");
+    document.querySelector(".continue-fish").classList.remove("invisible");
+})
+
+// You click "penguin"
+document.querySelector(".penguin-btn").addEventListener("click", function() {
+    // Story
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Come On!</h3><br><p class='school'>Penguins don't fly.</p><br><img class='monster' src='images/penguin.jpg'>"
+    // Buttons
+    document.querySelector(".frigate-btn").classList.add("invisible");
+    document.querySelector(".albatross-btn").classList.add("invisible");
+    document.querySelector(".penguin-btn").classList.add("invisible");
+    // Sound
+    loseSound.play();
+})
+
+// You click "cetacean"
+document.querySelector(".cetacean-btn").addEventListener("click", function () {
+    // Background Change
+    document.querySelector(".container").classList.add("cetacean-bg");
+    document.querySelector(".title").classList.remove("title-white");
+    document.querySelector(".smallwords").classList.add("smallwords-black");
+    // Story 
+    document.querySelector(".story").innerHTML = "<p class='school'>What distinguishes baleen whales from toothed whales?</p>"
+    // Buttons
+    document.querySelector(".different-btn").classList.remove("invisible");
+    document.querySelector(".giveup-btn").classList.remove("invisible");
+    document.querySelector(".fish-btn").classList.add("invisible");
+    document.querySelector(".seabird-btn").classList.add("invisible");
+    document.querySelector(".cetacean-btn").classList.add("invisible");
+})
+
+// You click "different"
+document.querySelector(".different-btn").addEventListener("click", function() {
+    // Story
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Yes</h3><br><p class='school'>You are correct.</p><br><img class='monster' src='images/cetaceans.jpg'>"
+    // Sound
+    winSound.play();
+    // Buttons
+    document.querySelector(".different-btn").classList.add("invisible");
+    document.querySelector(".giveup-btn").classList.add("invisible");
+    document.querySelector(".continue-fish").classList.remove("invisible");
+})
+
+// You click "give up"
+document.querySelector(".giveup-btn").addEventListener("click", function() {
+    // Story
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>What the hell</h3><br><p class='school'>You give up so easily. You fail!</p><br><img class='monster' src='images/madwhale.png'>"
+    // Sound
+    loseSound.play();
+    // Buttons
+    document.querySelector(".different-btn").classList.add("invisible");
+    document.querySelector(".giveup-btn").classList.add("invisible");
+})
+
+// You click "go down"
+document.querySelector(".down-btn").addEventListener("click", function () {
+    // Background Change
+    document.querySelector(".container").classList.add("deep-bg");
+    // Story 
+    document.querySelector(".story").innerHTML = "<p class='school'>Going to the deep, all you see is darkness.</p>";
+    // Buttons
+    document.querySelector(".up-btn").classList.add("invisible");
+    document.querySelector(".down-btn").classList.add("invisible");
+    document.querySelector(".continuedeep-btn").classList.remove("invisible");
+})
+
+// You click "continuedeep"
+document.querySelector(".continuedeep-btn").addEventListener("click", function () {
+    // Background Change
+    document.querySelector(".container").classList.add("squid-bg");
+    // Story 
+    document.querySelector(".story").innerHTML = "<p class='school'>Oh crap! There is a giant squid. How can you save yourself?</p>";
+    // Buttons
+    document.querySelector(".secret-btn").classList.remove("invisible");
+    document.querySelector(".big-btn").classList.remove("invisible");
+    document.querySelector(".mouth-btn").classList.remove("invisible");
+    document.querySelector(".continuedeep-btn").classList.add("invisible");
+})
+
+// You click "secret"
+document.querySelector(".secret-btn").addEventListener("click", function () {
+    // Story 
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>“Clatter!”</h3><br><p class='school'>You attack the squid’s eye and get away from it.</p><br><img class='monster' src='images/knife.jpg'>";
+    // Buttons
+    document.querySelector(".secret-btn").classList.add("invisible");
+    document.querySelector(".big-btn").classList.add("invisible");
+    document.querySelector(".mouth-btn").classList.add("invisible");
+    document.querySelector(".continue-fish").classList.remove("invisible");
+    // Cut sound
+    cutSound.play();
+})
+
+// You click "big brother"
+document.querySelector(".big-btn").addEventListener("click", function () {
+    // Story 
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Bite</h3><br><p class='school'>The Big Brother you called is the sperm whale. It enjoys eating the squid.</p><br><img class='monster' src='images/spermwhale.jpg'>";
+    // Buttons
+    document.querySelector(".secret-btn").classList.add("invisible");
+    document.querySelector(".big-btn").classList.add("invisible");
+    document.querySelector(".mouth-btn").classList.add("invisible");
+    document.querySelector(".continue-fish").classList.remove("invisible");
+    // win sound
+    winSound.play();
+})
+
+// You click "punch mouth"
+document.querySelector(".mouth-btn").addEventListener("click", function () {
+    // Story 
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Ouch!</h3><br><p class='school'>The beak of the giant squid is hard and sharp. You get torn.</p><br><img class='monster' src='images/beak.jpg'>";
+    // Buttons
+    document.querySelector(".secret-btn").classList.add("invisible");
+    document.querySelector(".big-btn").classList.add("invisible");
+    document.querySelector(".mouth-btn").classList.add("invisible");
+    // lose sound
+    loseSound.play();
+})
+
+
+// Finish Ocean Adventure
+document.querySelector(".continue-fish").addEventListener("click", function() {
+    // Story
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Congratulations!</h3><br><p class='school'>You finish your adventure. Enjoy the beautiful ocean and amazing animals.</p>"
+    // Background Change
+    document.querySelector(".container").classList.add("surface-bg");
+    // Buttons
+    document.querySelector(".continue-fish").classList.add("invisible");
+    document.querySelector(".thank-btn").classList.remove("invisible");
+    document.querySelector(".goland-btn").classList.remove("invisible");
+
+    // Sound
+    woohooSound.play();
+})
+
+
+// Click "Thanks"
+document.querySelector(".thank-btn").addEventListener("click", function() {
+    // Story
+    document.querySelector(".story").innerHTML = "<h3 class='doordie'>Congratulations!</h3><br><p class='school'>You finish the game.</p>"
+    // Background Change
+    document.querySelector(".container").classList.add("finish-bg");
+    // Buttons
+    document.querySelector(".thank-btn").classList.add("invisible");
+    document.querySelector(".goland-btn").classList.add("invisible");
+    document.querySelector(".gosea-btn").classList.add("invisible");
+})
+
+
+// Click "GO to Sea Adventure"
+document.querySelector(".gosea-btn").addEventListener("click", function() {
+     // Water Splash Sound
+     diveSound.play();
+     // Background Change
+     document.querySelector(".container").classList.add("ocean-bg");
+     // Story
+     document.querySelector(".story").innerHTML = "<p>You are “under the sea”. Swim around.</p>"
+     // Buttons
+     document.querySelector(".swim-btn").classList.remove("invisible");
+     document.querySelector(".land-btn").classList.add("invisible");
+     document.querySelector(".sea-btn").classList.add("invisible");
+     document.querySelector(".thank-btn").classList.add("invisible");
+    document.querySelector(".goland-btn").classList.add("invisible");
+    document.querySelector(".gosea-btn").classList.add("invisible");
+})
+
+// Click "go to land"
+document.querySelector(".goland-btn").addEventListener("click", function() {
+    //Land sound
+    landSound.play();
+    //Change bg
+    document.querySelector(".container").classList.remove("squid-bg", "surface-bg", "seabird-bg", "cetacean-bg", "sailfish-bg", "sardine-bg", "finish-bg", "deep-bg", "sea-bg", "killerwhale-bg", "greatwhite-bg", "sealion-bg", "ocean-bg", "mount-bg", "savanna-safe-bg", "hyena-bg", "lionpride-bg", "lioncub-bg", "savanna-animal-bg", "savanna-bg", "end-bg", "tiger-bg");
+    document.querySelector(".container").classList.add("jungle-bg");
+    document.querySelector(".title").classList.add("title-white");
+    //story
+    document.querySelector(".story").innerHTML = "<p>Now you enter the jungle. Look around and be familiar with the environment.</p><br><h3 class='doordie'>Move on when you are ready.</h3>"
+    //remove buttons and elf
+    document.querySelector(".thank-btn").classList.add("invisible");
+    document.querySelector(".goland-btn").classList.add("invisible");
+    document.querySelector(".elf").classList.add("invisible");
+    document.querySelector(".land-btn").classList.add("invisible");
+    document.querySelector(".sea-btn").classList.add("invisible");
+    //move on
+    document.querySelector(".move-on-btn").classList.remove("invisible");
+})
 
 //functions are simply a lsit of commands to do
 //declare a variable for your sound object
@@ -507,6 +786,7 @@ var diveSound = new Audio("sound/dive.mp3");
 var sealionSound = new Audio("sound/sealion.mp3");
 var punchSound = new Audio("sound/punch.mp3");
 var waveSound = new Audio("sound/wave.mp3");
-
+var woohooSound = new Audio("sound/woohoo.mp3");
+var cutSound = new Audio("sound/cut.mp3")
 // to call your audio file, type the name of it followed by .play()
-loseSound.play();
+// loseSound.play();
