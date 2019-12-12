@@ -220,6 +220,40 @@
     background-image: url("images/sea.jpg");
 }
 
+.sardine-bg {
+    background-image: url("images/sardine.jpg");
+}
+
+.sailfish-bg {
+    background-image: url("images/sailfish.jpg");
+}
+
+.deep-bg {
+    background-image: url("images/deep.jpg");
+}
+
+.squid-bg {
+    background-image: url("images/squid.jpg");
+}
+
+
+.seabird-bg {
+    background-image: url("images/seabird.jpg");
+}
+
+.cetacean-bg {
+    background-image: url("images/cetacean.jpg");
+}
+
+
+.surface-bg {
+    background-image: url("images/oceansurface.jpg");
+}
+
+
+.finish-bg {
+    background-image: url("images/mountsea.jpg");
+}
 
 /* Story */
 .story {
@@ -254,7 +288,7 @@
 }
 
 .school {
-    font-size: 1.2em;
+    font-size: 1.5em;
     text-align: center;
 }
 
